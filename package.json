@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.22.13",
+    "@clerk/nextjs": "^6.11.3",
     "@radix-ui/react-dropdown-menu": "^2.1.6",
     "@radix-ui/react-slot": "^1.1.2",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "convex": "^1.19.2",
     "dropdown-menu": "^0.1.1",
     "lucide": "^0.475.0",
     "lucide-react": "^0.475.0",
     "next": "15.1.7",
+    "next-auth": "^4.24.11",
     "next-themes": "^0.4.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
