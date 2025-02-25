@@ -4,10 +4,6 @@ import "./globals.css";
 import { ThemeProvider } from "@/components/Provider/theme-provider";
 import { ConvexClientProvider } from "@/components/Provider/convex.provider";
 
-
-
-
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],

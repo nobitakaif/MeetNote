@@ -1,27 +1,66 @@
 "use client"
 
-import { ChevronLast, ChevronLeft, ChevronsLeft } from "lucide-react"
+import { ChevronRight, ChevronsLeft, Copyright, Home } from "lucide-react"
+import { useState } from "react"
 
 export const Navigation =()=>{
+    const [navOn, setNavOn] =useState(true)
+    
+    function isNav(){
+        if( window.innerWidth > 720){
+            setNavOn(false)
+        }
+        setNavOn(!navOn)
+    }
+
     return <>
-       <aside 
+    {navOn ? <aside 
        className="group/sidebar h-screen bg-secondary  overflow-y-auto relative flex w-60 flex-col bg-gray-200"
        >
         <div role="button" className="h-6 w-6 text-muted-foreground rounded-sm hover:bg-neutral-300 dark:hover:bg-neutral-600 absolute
         top-3 right-2 opacity-0 group-hover/sidebar:opacity-100
         ">
-            <ChevronsLeft className="h-6 w-6"/>
+            <ChevronsLeft className="h-6 w-6" onClick={isNav}/>
+            
         </div>
-        <div>
-            <p>action</p>
-        </div>
-        <div>
-            Documents
+         <div className="p-5 m-6 flex justify-between h-screen flex-col">
+            <div className="h-72 flex flex-col justify-between  ">
+            <div className="flex">
+                <Home className="cursor-pointer"/>
+                <p className="pl-4 cursor-pointer">Home</p>
+            </div>
+            <div className="flex">
+                <Home className="cursor-pointer"/>
+                <p className="pl-4 cursor-pointer">Home</p>
+            </div>
+            <div  className="flex">
+                <Home className="cursor-pointer"/>
+                <p className="pl-4 cursor-pointer">Home</p>
+            </div>
+            <div className="flex">
+                <Home className="cursor-pointer"/>
+                <p className="pl-4 cursor-pointer">Home</p>
+            </div>
+            <div  className="flex">
+                <Home className="cursor-pointer"/>
+                <p className="pl-4 cursor-pointer">Home</p>
+            </div>
+            <div className="flex">
+                <Home className="cursor-pointer"/>
+                <p className="pl-4 cursor-pointer">Home</p>
+            </div>
+            </div>
+            <div className="flex gap-1">
+                <Copyright/>copyright
+            </div>
         </div>
         <div 
          className="opacity-0 group-hover/sidebar:opacity-100 transition cursor-ew-resize absolute h-screen w-1 bg-primary/10 right-0 top-0"
         />
-       </aside>
+      
+       </aside> : <ChevronRight onClick={isNav} className="m-3 cursor-pointer"/>}
+       
+       
     </>
 }
 

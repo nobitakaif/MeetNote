@@ -4,6 +4,7 @@ import { useConvexAuth } from "convex/react"
 import { redirect } from "next/navigation"
 import { Navigation } from "./_component/navigation"
 
+
 const MainLayout = ({
     children
 }:{
@@ -22,7 +23,7 @@ const MainLayout = ({
     }
     return (
 
-        <div className="h-full flex dark:bg-[#1f1f1f]">
+        <div className=" flex ">
             <Navigation/>
             <main>
                 {children}
